@@ -16,24 +16,6 @@ function setup() {
 
 function draw() {
   background(fundo);  
-  console.log(aranha.x);
-  //controla o scaner
-  finder.x = World.mouseX;
-  finder.y = World.mouseY;
-  //fechar o objetivo
-  if(keyDown("x")){
-    obj.visible = false;
-  }
-  if (finder.x - aranha.x < aranha.width/2 + finder.width/2
-    && aranha.x - finder.x < aranha.width/2 + finder.width/2
-    && finder.y - aranha.y < aranha.height/2 + finder.height/2
-    && aranha.y - finder.y < aranha.height/2 + finder.height/2) {
-  finder.shapeColor = "red";
-  aranha.shapeColor = "red";
-}
-else {
-  finder.shapeColor = "green";
-  aranha.shapeColor = "green";
-}
+  
   drawSprites();
 }
